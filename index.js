@@ -11,7 +11,7 @@ withdrawButton.onclick = withdraw
 fundButton.onclick = fund
 balanceButton.onclick = getBalance
 
-
+getBalance()
 
 async function connect() {
   if (typeof window.ethereum !== "undefined") {
@@ -51,6 +51,8 @@ async function withdraw() {
       // await transactionResponse.wait(1)
     } catch (error) {
       console.log(error)
+      if(String(error).includes("execution reverted"))
+        alert("Only owner of this page can withdraw!")
     }
   } else {
     withdrawButton.innerHTML = "Please install MetaMask"

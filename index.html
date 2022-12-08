@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Fund Me App</title>
+    <title>Fund My App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
@@ -13,19 +13,22 @@
   <body>
     <div class="container-fluid bg-dark vh-100 vw-100 position-relative">
       <div class="rounded p-4 w-50 position-absolute top-50 start-50 translate-middle">
+        <h1 class="display-3 border-bottom pb-3 fw-semibold mb-4">Fund My App</h1>
 
         <button id="connectButton" class="btn btn-primary">Connect</button>
 
         <button id="balanceButton" class="btn btn-primary">getBalance</button>
 
-        <div id="display" class="d-inline ms-2">--
+        <div id="display" class="d-inline ms-2 rounded-pill p-2" 
+        style="background-color: rgba(15, 4, 4, 0.301);">
+          --
         </div>
 
         <!-- <form> -->
         <div class="my-3">
-          <label for="ethAmount" class="form-label d-block">ETH Amount</label>
+          <label for="ethAmount" class="form-label d-block">Enter the ETH amount you would like to fund:</label>
           <input id="ethAmount" class="form-control w-75 d-inline"
-            placeholder="0.05 ETH" />
+            placeholder="Minimum 0.05 ETH" />
           <button type="button" id="fundButton" class="btn btn-primary ms-2"> Fund
           </button>
         </div>
